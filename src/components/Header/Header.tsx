@@ -2,15 +2,21 @@ import AuthButtonsContainer from "./Navigation/AuthButtonsContainer/AuthButtonsC
 import Navigation from "./Navigation/Navigation";
 import styles from './header.module.scss';
 import bars from '../../assets/images/icon-bars.svg';
+import { useState } from "react";
+
 export default function Header(){
+    const [toggle, setToggle] = useState(false);
+
     return(
         <header className={styles['b-header']}>
             <h1>Shortly</h1>
-            <Navigation/>
-            <AuthButtonsContainer/>
-            <div className={styles['b-header__bars']}>
-                <img src={bars} alt="" />
+            <div className={`${styles['b-header__navigation']} ${styles[`${toggle ? 'b-header__navigation--show' : ""}`]}`}>
+                <Navigation/>
+                <AuthButtonsContainer/>
             </div>
+            <button className={styles['b-header__bars']} onClick={()=> setToggle(!toggle)}>
+                <img src={bars} alt="" />
+            </button>
         </header>
     )
 }

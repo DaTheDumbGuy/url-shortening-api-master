@@ -1,1 +1,1 @@
-.b-header{display:flex;align-items:center;justify-content:space-between;padding:1em}.b-header__navigation{display:none;background:green;position:absolute;right:0}.b-header__authButtonsContainer{display:none}.b-header__bars{height:25px;width:25px}
+.b-header{display:flex;align-items:center;justify-content:space-between;padding:1em}.b-header__navigation{display:none;background:#000}.b-header__navigation__links{background:green}.b-header__navigation--show{display:inline-block;background:blue}.b-header__bars{height:25px;width:25px}

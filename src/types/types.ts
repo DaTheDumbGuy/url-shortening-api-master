@@ -1,0 +1,1 @@
+export type toggle = React.Dispatch<React.SetStateAction<boolean>>;
