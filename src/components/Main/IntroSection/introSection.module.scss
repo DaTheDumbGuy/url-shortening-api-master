@@ -1,0 +1,41 @@
+@use '../../../assets/scss/base/index' as i;
+@use '../../../assets/scss/utilities/mixins' as m;
+.b-introSection{
+    display:flex;
+    flex-direction: column-reverse;
+    margin-bottom:2em;
+
+    &__imgContainer{
+        padding-left:1em;
+        width:100%;
+        overflow: hidden;
+        
+        img{
+            object-fit: cover;
+            display: block;
+            width:450px;
+            height:auto;
+        }
+    }
+    &__getStarted{
+        text-align: center;
+        margin:2em 0;
+        padding:0 1em;
+
+        h2{
+            font-size:2.2em;
+            line-height: 1.2em;
+            margin-bottom:0.3em;
+            color: i.$c_neutral_veryDarykBlue;
+        }
+        p{
+            margin-bottom:1em;
+            color:i.$c_neutral_grayishViolet;
+        }
+
+        button{
+            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 50px);
+            color:white;
+        }
+    }
+}

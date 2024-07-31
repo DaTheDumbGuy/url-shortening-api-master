@@ -1,0 +1,32 @@
+@use '../../../assets/scss/utilities/mixins' as m;
+@use '../../../assets/scss/base/index' as i;
+
+.b-shortenSection{
+    padding:1.2em;
+    margin:0 1em 5em 1em;
+    border-radius: 10px;
+    background:url(../../../assets/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: i.$bg_primary_violet;
+    color: white;
+
+    &__inputContainer{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        width:100%;
+
+        input{
+            padding:1em;
+            border: none;
+            border-radius: 5px;
+        }
+        button{
+            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px);
+        }
+        // p{
+        //     display: none;
+        // }
+    }
+}
