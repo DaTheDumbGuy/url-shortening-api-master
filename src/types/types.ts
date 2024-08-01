@@ -1,6 +1,6 @@
 export type toggle = React.Dispatch<React.SetStateAction<boolean>>;
 
-export interface shortenItem {
+export interface Item {
     link:string;
     shortenedLink:string;
 }

@@ -25,8 +25,8 @@
         button{
             @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px);
         }
-        // p{
-        //     display: none;
-        // }
+        p{
+            display: none;
+        }
     }
 }

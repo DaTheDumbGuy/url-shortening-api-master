@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import styles from './shortenSection.module.scss';
 import { Item } from '../../../types/types';
+import ItemCard from './Item/ItemCard';
 export default function ShortenSection() {
-    const [items, setItems] = useState<string[]>([]);
+    const [items, setItems] = useState<Item[]>([]);
     const [item, setItem] = useState<Item>({link:"", shortenedLink:""});
     const [error, setError] = useState<string | null>(null);
+
     function handleShortenLink() {
         // Simple example of link shortening logic; replace with actual logic
         if (!item.link) {
@@ -13,9 +15,9 @@ export default function ShortenSection() {
         }
         
         setError(null);
-        const shortened = `short.url/${btoa(item.link)}`; // Placeholder for shortening logic
+        const shortened = `rel.ink/${btoa(item.link)}`; // Placeholder for shortening logic
         setItem({ link: item.link, shortenedLink: shortened });
-        setItems([...items, shortened]);
+        setItems([...items, item]);
       }
       console.log(error);
       console.log(item, items);
@@ -30,7 +32,9 @@ export default function ShortenSection() {
             </section>
             <div>
                 <ul>
-
+                    {items?.map((item)=>(
+                        <ItemCard link={item.link} shortenedLink={item.shortenedLink}/>
+                    ))}
                 </ul>
             </div>
         </>
