@@ -26,8 +26,8 @@ export default function ShortenSection() {
             <section className={styles['b-shortenSection']}>
                 <div className={styles['b-shortenSection__inputContainer']}>
                     <input type="text" placeholder="Shorten a link here..." value={item.link} onChange={(e)=> setItem({...item, link: e.target.value })}/>
-                    <button onClick={handleShortenLink}>Shorten It!</button>
                     <p>{error}</p>
+                    <button onClick={handleShortenLink}>Shorten It!</button>
                 </div>
             </section>
             <div>

@@ -4,7 +4,7 @@ export default function ItemCard({link, shortenedLink}: Item){
     return(
         <li>
             <span>{link}</span>
-            <a href="#">{shortenedLink}</a>
+            <a href={shortenedLink} target="_blank">{shortenedLink}</a>
             <button>Copy</button>
         </li>
     )
