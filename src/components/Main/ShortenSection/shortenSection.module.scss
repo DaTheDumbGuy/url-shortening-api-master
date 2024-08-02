@@ -3,30 +3,73 @@
 
 .b-shortenSection{
     padding:1.2em;
-    margin:0 1em 5em 1em;
+    margin:0 1em;
     border-radius: 10px;
     background:url(../../../assets/images/bg-shorten-mobile.svg);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: top right;
     background-color: i.$bg_primary_violet;
     color: white;
 
     &__inputContainer{
         display: flex;
         flex-direction: column;
-        gap:1em;
         width:100%;
 
         input{
             padding:1em;
             border: none;
             border-radius: 5px;
+            &.error{
+                border: 2px solid i.$c_error;
+            }
         }
         button{
-            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px);
+            margin-top:1em;
+            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 1em, auto);
         }
         p{
             display: none;
+
+            &.error{
+                display:block;
+                margin-top:2px;
+                font-size:0.7em;
+                font-style: italic;
+                color:i.$c_error;
+            }
+        }
+    }
+}
+
+.b-linkCards{
+    margin: 0 1em;    
+
+    &__container{   
+        list-style-type: none;
+
+        &__card{
+            position: relative;
+            display:flex;
+            flex-direction: column;
+            background:white;
+            margin:1em 0;
+            border-radius:4px;
+
+            span{   
+                padding: 0.5em 1em;
+                border-bottom:2px solid i.$c_neutral_gray;
+            }
+            &__body{
+                display: flex;
+                flex-direction: column;
+                gap:0.5em;
+                padding:0.5em 1em;
+
+                button{
+                    @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 0.5em, auto);
+                }
+            }
         }
     }
 }

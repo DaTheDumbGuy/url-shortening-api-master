@@ -1,5 +1,5 @@
-@mixin button-styles($bg-color, $font-size, $font-weight, $color, $border-radius) {
-    padding: 1em 2em;
+@mixin button-styles($bg-color, $font-size, $font-weight, $color, $border-radius, $px, $py) {
+    padding: $px $py;
     border: none;
     background: $bg-color;
     font-size: $font-size;

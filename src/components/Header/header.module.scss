@@ -1,11 +1,12 @@
 @use '../../assets/scss/base/variables' as v;
+@use '../../assets/scss/utilities/mixins' as m;
 .b-header{
     position: relative;
     display:flex;
     align-items: center;
     justify-content: space-between;
     padding:1em;  
-    
+
     &__navigation{
         display:none;
         background:v.$bg_primary_violet;
@@ -88,13 +89,14 @@
                 }
                 
                 &__signInButton{
-                    font-weight: v.$fw_bold;
-                    font-size: 1em;
-                    padding:0.8rem;
-                    border-radius:50px;
-                    border: none;
-                    color:white;
-                    background:v.$bg_primary_cyan;
+                    @include m.button-styles(v.$bg_primary_cyan, 1em, v.$fw_bold, white, 50px, 0.8rem, 0.8rem);
+                    // font-weight: v.$fw_bold;
+                    // font-size: 1em;
+                    // padding:0.8rem;
+                    // border-radius:50px;
+                    // border: none;
+                    // color:white;
+                    // background:v.$bg_primary_cyan;
                 }
             }
 

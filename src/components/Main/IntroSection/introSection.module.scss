@@ -31,10 +31,11 @@
         p{
             margin-bottom:1em;
             color:i.$c_neutral_grayishViolet;
+            font-weight: i.$fw_normal;
         }
 
         button{
-            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 50px);
+            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 50px, 1em, 2em);
             color:white;
         }
     }
