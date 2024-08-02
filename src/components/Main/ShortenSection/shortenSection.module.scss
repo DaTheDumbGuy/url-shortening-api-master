@@ -26,7 +26,8 @@
         }
         button{
             margin-top:1em;
-            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 1em, auto);
+            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
+
         }
         p{
             display: none;
@@ -67,7 +68,7 @@
                 padding:0.5em 1em;
 
                 button{
-                    @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 0.5em, auto);
+                    @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
                 }
             }
         }

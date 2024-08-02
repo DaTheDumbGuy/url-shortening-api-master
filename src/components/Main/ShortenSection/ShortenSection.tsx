@@ -10,6 +10,7 @@ export default function ShortenSection() {
 
     function handleInput(e:React.ChangeEvent<HTMLInputElement>){
         setError(null);
+        console.log("Item::",item);
         setItem({...item, link: e.target.value });
     }
     function handleShortenLink() {
@@ -24,8 +25,6 @@ export default function ShortenSection() {
         setItem({ link: item.link, shortenedLink: shortened });
         setItems([...items, item]);
       }
-      console.log(error);
-      console.log(item, items);
     return (
         <>
             <section className={styles['b-shortenSection']}>
@@ -37,7 +36,7 @@ export default function ShortenSection() {
             </section>
             <section className={styles['b-linkCards']}>
                 <ul className={styles['b-linkCards__container']}>
-                    {items?.map((item)=>(
+                    {items.map((item)=>(
                         <ItemCard link={item.link} shortenedLink={item.shortenedLink}/>
                     ))}
                 </ul>

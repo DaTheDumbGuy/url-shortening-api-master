@@ -7,7 +7,7 @@ export default function ItemCard({link, shortenedLink}: Item){
             <span>{link}</span>
             <div className={styles['b-linkCards__container__card__body']}>
                 <a href={shortenedLink} target="_blank">{shortenedLink}</a>
-                <button>Copy</button>
+                <button  onClick={() => navigator.clipboard.writeText(shortenedLink)}>Copy</button>
             </div>
         </li>
     )
