@@ -6,11 +6,11 @@ import styles from './main.module.scss';
 
 export default function Main(){
     return(
-        <main className={styles['b-main']}>
-            <IntroSection/>
-            <ShortenSection/>
-            <StatisticsSection/>
-            <CallToActionSection/>
+    <main className={styles['b-main']}>
+        <IntroSection/>
+        <ShortenSection/>
+        <StatisticsSection/>
+        <CallToActionSection/>
     </main>
     )
 }

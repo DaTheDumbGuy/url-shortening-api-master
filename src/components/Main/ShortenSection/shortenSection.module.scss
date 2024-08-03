@@ -1,74 +1,87 @@
 @use '../../../assets/scss/utilities/mixins' as m;
 @use '../../../assets/scss/base/index' as i;
+.b-shortenContainer{
+    margin-top:100px;
+    background:i.$c_neutral_gray;
 
-.b-shortenSection{
-    padding:1.2em;
-    margin:0 1em;
-    border-radius: 10px;
-    background:url(../../../assets/images/bg-shorten-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-color: i.$bg_primary_violet;
-    color: white;
-
-    &__inputContainer{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-
-        input{
-            padding:1em;
-            border: none;
-            border-radius: 5px;
-            &.error{
-                border: 2px solid i.$c_error;
+    &__shortenSection{
+        position: relative;
+        top:-100px;
+        padding:1.2em;
+        margin:0 1em;
+        border-radius: 10px;
+        background:url(../../../assets/images/bg-shorten-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: i.$bg_primary_violet;
+        color: white;
+    
+        &__inputContainer{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+    
+            input{
+                padding:1em;
+                border: none;
+                border-radius: 5px;
+                &.error{
+                    border: 2px solid i.$c_error;
+                }
             }
-        }
-        button{
-            margin-top:1em;
-            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
-
-        }
-        p{
-            display: none;
-
-            &.error{
-                display:block;
-                margin-top:2px;
-                font-size:0.7em;
-                font-style: italic;
-                color:i.$c_error;
+            button{
+                margin-top:1em;
+                @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
+    
+            }
+            p{
+                display: none;
+    
+                &.error{
+                    display:block;
+                    margin-top:2px;
+                    font-size:0.7em;
+                    font-style: italic;
+                    color:i.$c_error;
+                }
             }
         }
     }
-}
-
-.b-linkCards{
-    margin: 0 1em;    
-
-    &__container{   
-        list-style-type: none;
-
-        &__card{
+    
+    &__linkCards{
+        margin: 0 1em;    
+    
+        &__container{   
             position: relative;
-            display:flex;
+            top: -80px;
+            display: flex;
             flex-direction: column;
-            background:white;
-            margin:1em 0;
-            border-radius:4px;
-
-            span{   
-                padding: 0.5em 1em;
-                border-bottom:2px solid i.$c_neutral_gray;
-            }
-            &__body{
-                display: flex;
+            gap:1em;
+            list-style-type: none;
+    
+            &__card{
+                position: relative;
+                display:flex;
                 flex-direction: column;
-                gap:0.5em;
-                padding:0.5em 1em;
-
-                button{
-                    @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
+                background:white;
+                border-radius:4px;
+                span{   
+                    padding: 0.5em 1em;
+                    border-bottom:2px solid i.$c_neutral_gray;
+                }
+                &__body{
+                    display: flex;
+                    flex-direction: column;
+                    gap:0.5em;
+                    padding:1em 1em;
+                    
+                    a{
+                        text-decoration: none;
+                        color:i.$bg_primary_cyan;
+                    }
+                    button{
+                        @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
+                    }
                 }
             }
         }

@@ -1,0 +1,60 @@
+@use '../../../assets/scss/base/index' as i;
+.b-statisticsArticle{
+    background:i.$c_neutral_gray;
+    text-align: center;
+
+    &__title{
+        color:i.$c_neutral_veryDarkViolet;
+        margin-bottom:0.8em;
+    }
+    &__description{
+        color:i.$c_neutral_grayishViolet;
+        font-weight: i.$fw_normal;
+        margin-bottom:4em;
+    }
+
+    &__sections{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index:2;
+        gap:2em;
+    }
+
+    &__section{
+        background:white;
+        margin:1em;
+        padding:1em;
+        font-size:0.9em;    
+        text-wrap:balance;
+        border-radius: 5px;
+        z-index:2;
+
+        img{    
+            position: relative;
+            top:-50px;
+            background:i.$bg_primary_violet;
+            padding:1em;
+            border-radius: 50%;
+        }
+        &__body{
+            position: relative;
+            top:-30px;
+
+            &__sectionTitle{
+                margin-bottom:0.8em;
+            }
+        }
+    }
+    &__lineThrough{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        z-index:0;
+        width:10px;
+        height:90%;
+        background:i.$bg_primary_cyan;
+    }
+}
