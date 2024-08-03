@@ -19,7 +19,7 @@
     }
     &__getStarted{
         text-align: center;
-        margin:2em 0;
+        margin:3.5em 0;
         padding:0 1em;
 
         h2{
@@ -36,7 +36,6 @@
 
         button{
             @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 50px, 2rem, 1rem);
-            color:white;
         }
     }
 }

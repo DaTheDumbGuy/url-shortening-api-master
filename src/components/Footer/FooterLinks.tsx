@@ -1,6 +1,8 @@
+import styles from './Footer.module.scss';
+
 export default function FooterLinks() {
     return (
-        <div className="b-footer__links">
+        <div className={styles['b-footer__links']}>
             <ul>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Link Shortening</a></li>

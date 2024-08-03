@@ -1,7 +1,8 @@
 @use '../../../assets/scss/base/index' as i;
 .b-statisticsArticle{
-    background:i.$c_neutral_gray;
+    background:i.$c_neutral_lightBlue;
     text-align: center;
+    padding-bottom:4em;
 
     &__title{
         color:i.$c_neutral_veryDarkViolet;
@@ -44,7 +45,12 @@
             top:-30px;
 
             &__sectionTitle{
+                font-size:1.5e  m;
                 margin-bottom:0.8em;
+            }
+            &__sectionContent{
+                color:i.$c_neutral_gray;
+                font-weight: i.$fw_normal;
             }
         }
     }

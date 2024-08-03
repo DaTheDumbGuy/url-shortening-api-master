@@ -1,0 +1,26 @@
+@use '../../../assets/scss/base/index' as b;
+@use '../../../assets/scss/utilities/mixins' as m;
+.b-getStarted{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1em;
+    background-color:b.$bg_primary_violet;
+    background-image: url(../../../assets/images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:white;
+    height:300px;
+
+    button{
+        @include m.button-styles(b.$bg_primary_cyan, 1em, b.$fw_bold, white, 50px, 2rem, 1rem);
+    }
+}
+
+@media (min-width:768px) {
+    .b-getStarted{
+        background-image: url(../../../assets/images/bg-boost-desktop.svg);
+    }
+}

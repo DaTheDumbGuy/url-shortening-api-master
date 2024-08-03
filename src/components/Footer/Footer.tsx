@@ -5,7 +5,7 @@ import styles from './Footer.module.scss';
 
 export default function Footer() {
     return (
-        <footer className={styles['b__footer']}>
+        <footer className={styles['b-footer']}>
             <FooterBrand />
             <FooterLinks />
             <FooterSocialLinks />

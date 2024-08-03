@@ -1,3 +1,49 @@
-.b__footer{
-    background:grey;
+@use '../../assets/scss/base/index' as b;
+
+.b-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+    padding:2em 0;
+    flex-direction: column;
+    background:b.$c_neutral_veryDarkViolet;
+    color: white;
+
+    &__brandName{
+        font-size:1.5em;
+    }
+    &__links{
+        display:flex;
+        flex-direction: column;
+        gap:2em;
+
+        ul{
+            list-style-type: none;
+            text-align: center;
+            
+            li{
+                &:first-child{
+                    margin-bottom:0.8em;
+                    font-weight: b.$fw_bold;
+                }
+                &:not(li:first-child){
+                    line-height: 1.8em;
+                }
+                a{
+                    color:b.$c_neutral_gray;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__socialLinks{
+        ul{
+            display:flex;
+            list-style-type: none;
+            gap:1.5em;
+
+        }
+    }
 }
