@@ -1,5 +1,6 @@
 @use '../../../assets/scss/base/index' as i;
 @use '../../../assets/scss/utilities/mixins' as m;
+
 .b-introSection{
     display:flex;
     flex-direction: column-reverse;
@@ -7,14 +8,19 @@
     
     &__imgContainer{
         padding-left:1em;
-        width:100%;
         overflow: hidden;
         
         img{
-            object-fit: cover;
             display: block;
             width:450px;
-            height:auto;
+            height: auto;
+        }
+        @media (min-width:500px) {
+            &{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
     &__getStarted{
@@ -36,6 +42,20 @@
 
         button{
             @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 50px, 2rem, 1rem);
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .b-introSection{
+
+        // &__imgContainer{
+        //     width: 50%;
+        // }
+
+        &__getStarted{
+            width:80%;
+            margin: 3.5em auto;
         }
     }
 }

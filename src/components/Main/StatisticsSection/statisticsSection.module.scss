@@ -63,4 +63,15 @@
         height:90%;
         background:i.$bg_primary_cyan;
     }
+
+    @media (min-width:768px) {
+        &__description{
+            width:80%;
+            margin:0 auto 4em auto;
+        }
+
+        &__section{
+            width:80%;
+        }
+    }
 }
