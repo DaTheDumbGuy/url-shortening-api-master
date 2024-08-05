@@ -37,8 +37,8 @@ export default function ShortenSection() {
                         onChange={(e) => setLink(e.target.value)}
                     />
                     {error && <p className={styles.error}>{error}</p>}
-                    <button onClick={handleShortenLink}>Shorten It!</button>
                 </div>
+                    <button onClick={handleShortenLink}>Shorten It!</button>
             </section>
             <section className={styles['b-shortenContainer__linkCards']}>
                 <ul className={styles['b-shortenContainer__linkCards__container']}>

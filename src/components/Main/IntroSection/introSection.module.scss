@@ -49,10 +49,6 @@
 @media (min-width:768px) {
     .b-introSection{
 
-        // &__imgContainer{
-        //     width: 50%;
-        // }
-
         &__getStarted{
             width:80%;
             margin: 3.5em auto;
@@ -62,7 +58,6 @@
 @media (min-width:1024px) {
     .b-introSection{
         flex-direction: row;
-
         &__getStarted{
             width: 50%;
         }
@@ -71,6 +66,25 @@
             // padding-left:100px;
             img{
                 width:600px;
+            }
+        }
+    }
+}
+@media (min-width:1440px) {
+    .b-introSection{
+        margin:1em 4em 0 4em;
+
+        &__getStarted{
+            text-align: start;
+            padding: 0;
+
+            h2{
+                font-size:3.5em;
+                margin-bottom:0;
+
+            }
+            p{
+                margin-bottom:2em;
             }
         }
     }
