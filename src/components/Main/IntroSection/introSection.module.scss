@@ -58,25 +58,31 @@
 @media (min-width:1024px) {
     .b-introSection{
         flex-direction: row;
+        align-items: center;
+        padding-left:35px;
+
         &__getStarted{
             width: 50%;
+            text-align: start;
         }
         &__imgContainer{
             width:50%;
-            // padding-left:100px;
+
             img{
-                width:600px;
+                width:500px;
             }
         }
     }
 }
 @media (min-width:1440px) {
     .b-introSection{
-        margin:1em 4em 0 4em;
+        margin:1em auto 0 auto;
+        padding:0;
+        width:1100px;
 
         &__getStarted{
-            text-align: start;
             padding: 0;
+            // width:100%;
 
             h2{
                 font-size:3.5em;
@@ -85,6 +91,17 @@
             }
             p{
                 margin-bottom:2em;
+                padding-right:50px;
+            }
+        }
+        &__imgContainer{
+            overflow: unset;
+            padding-left:100px;
+
+            img{
+                position: relative;
+                right:-100px;
+                width:700px;
             }
         }
     }
