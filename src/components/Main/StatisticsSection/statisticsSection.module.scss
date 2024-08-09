@@ -81,7 +81,7 @@
     }
 }
 
-@media(min-width:1440px) {
+@media(min-width:1024px) {
     .b-statisticsArticle {
         padding-top: 5em;
 
@@ -95,7 +95,8 @@
 
 
         &__sections {
-            width:1100px;
+            width:90%;
+            max-width: 1100px;
             height:400px;
             margin: auto;
             display: flex;

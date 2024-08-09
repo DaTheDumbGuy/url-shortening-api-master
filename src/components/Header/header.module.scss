@@ -12,11 +12,37 @@
         background:v.$bg_primary_violet;
         
         &__links{
-
+    
             ul{
-                color:red;
+            
+
+                li{
+
+                    a{
+                        
+                        &:hover{
+                            @include m.buttonHover(v.$c_neutral_veryDarykBlue, pointer, none);
+                        }
+                    }
+                }
             }
-       
+
+        }
+        &__authButtonsContainer{
+         
+            &__loginButton{
+              
+                &:hover{
+                    @include m.buttonHover(v.$c_neutral_veryDarykBlue, pointer, none);
+                }
+            }
+            
+            &__signInButton{
+              
+                &:hover{
+                    @include m.buttonHover(none, pointer, 0.5);
+                }
+            }
         }
 
         &--show{
@@ -66,6 +92,10 @@
                     border: none;
                     background:inherit;
                     font-weight: v.$fw_bold;
+                    &:hover{
+                        cursor: pointer;
+                        color:v.$c_neutral_veryDarykBlue;
+                    }
                 }
                 
                 &__signInButton{
@@ -95,7 +125,7 @@
 @media (min-width:1024px){
     .b-header{
         width:90%;
-
+        max-width: 1100px;
         &__navigation{
             display:flex;  
             justify-content: space-between;
@@ -117,12 +147,7 @@
                         a{
                             text-decoration: none;
                             color:v.$c_neutral_gray;
-                            font-weight: v.$fw_normal   ;
-                            
-                            &:hover{
-                                cursor: pointer;
-                                color:v.$c_neutral_veryDarykBlue;
-                            }
+                            font-weight: v.$fw_normal ;
                         }
                     }
                 }
@@ -140,19 +165,11 @@
                             background:inherit;
                             font-weight: v.$fw_bold;
 
-                            &:hover{
-                                cursor: pointer;
-                                color:v.$c_neutral_veryDarykBlue;
-                            }
                         }
                         
                         &__signInButton{
                             @include m.button-styles(v.$bg_primary_cyan, 1em, v.$fw_bold, white, 50px, 1.4rem, 0.8rem);
                         
-                            &:hover{
-                                cursor: pointer;
-                                opacity: 0.5;
-                            }
                         }
                     }
         }
@@ -165,7 +182,6 @@
 
 @media (min-width:1440px){
     .b-header{
-        width:1100px;
         padding:2em 0;  
     }
 }

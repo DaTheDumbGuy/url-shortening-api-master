@@ -6,9 +6,11 @@ import styles from './Footer.module.scss';
 export default function Footer() {
     return (
         <footer className={styles['b-footer']}>
-            <FooterBrand />
-            <FooterLinks />
-            <FooterSocialLinks />
+            <div className={styles['b-footer__container']}>
+                <FooterBrand />
+                <FooterLinks />
+                <FooterSocialLinks />
+            </div>
         </footer>
     );
 }

@@ -46,7 +46,10 @@
             margin-top:1em;
             width:100%;
             @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
-
+            
+            &:hover{
+                @include m.buttonHover(none, pointer, 0.5);
+            }
         }
     }
     
@@ -70,6 +73,8 @@
 
                 span{   
                     padding: 0.5em 1em;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     border-bottom:2px solid i.$c_neutral_gray;
                 }
                 &__body{
@@ -80,11 +85,19 @@
                     
                     a{
                         text-decoration: none;
-                        text-overflow: clip;
                         color:i.$bg_primary_cyan;
+                        
                     }
-                    button{
+                    &__copyButton{
                         @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 0, 1rem);
+                        
+                        &:hover{
+                            @include m.buttonHover(none, pointer, 0.5);
+                        }   
+
+                        &--active{
+                            @include m.button-styles(i.$bg_primary_violet, 1em, i.$fw_bold, white, 5px, 0, 1rem);
+                        }
                     }
                 }
             }
@@ -107,6 +120,7 @@
                     justify-content: space-between;
                     align-items: center;
                     flex-direction: row;
+                    gap:1em;
 
                     span{   
                         // display: none   ;
@@ -123,8 +137,8 @@
                         //     // text-decoration: none;
                         //     // color:i.$bg_primary_cyan;
                         // }
-                        button{
-                            @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 5px, 1em, 0.5em);
+                        &__copyButton{
+                            padding:0.5em 1em;
                         }
                     }
                 }
@@ -136,14 +150,15 @@
 @media (min-width:1024px) {
     .b-shortenContainer{
         margin-top:100px;
-        width:100%;
+        // width:100%;
 
         &__shortenSection{
             top:-60px;
             display: flex;
             // align-items: center;
             gap:1em;
-            width:930px;
+            width:90%;
+            max-width:1100px;
             padding:2em;    
             background-image:url(../../../assets/images/bg-shorten-desktop.svg);
             background-position: center;
@@ -166,7 +181,8 @@
         }
 
         &__linkCards{
-
+            width:90%;
+            max-width:1100px;
             &__container{
                 inset:0;
                 margin:auto;
@@ -177,41 +193,39 @@
 
 }
 
-@media (min-width:1440px) {
-    .b-shortenContainer{
-        margin-top:150px;
-        width:100%;
-        &__shortenSection{
-            top:-60px;
-            display: flex;
-            // align-items: center;
-            width:1100px;
+// @media (min-width:1440px) {
+//     .b-shortenContainer{
+//         margin-top:150px;
+//         // width:100%;
+//         &__shortenSection{
+//             top:-60px;
+//             display: flex;
 
-            &__inputContainer{
-                // flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                input{
-                    width:100%;
-                    gap:0;
-                    padding:1.1rem;
-                }
-            }
-            button{
-                align-self: flex-start;
-                width:15%;
-                margin: 0;
-            }
-        }
+//             &__inputContainer{
+//                 // flex-direction: row;
+//                 justify-content: space-between;
+//                 align-items: flex-start;
+//                 input{
+//                     width:100%;
+//                     gap:0;
+//                     padding:1.1rem;
+//                 }
+//             }
+//             button{
+//                 align-self: flex-start;
+//                 width:15%;
+//                 margin: 0;
+//             }
+//         }
 
-        &__linkCards{
+//         &__linkCards{
 
-            &__container{
-                width:1100px;
-                inset:0;
-                margin:auto;
-            }
-        }
+//             &__container{
+//                 width:1100px;
+//                 inset:0;
+//                 margin:auto;
+//             }
+//         }
     
-    }
-}
+//     }
+// }

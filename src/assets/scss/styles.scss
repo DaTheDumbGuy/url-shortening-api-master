@@ -5,6 +5,9 @@
     margin:0;
     box-sizing: border-box;
 }
+#root{
+    overflow: hidden;
+}
 body{
     color:i.$c_neutral_veryDarkViolet; 
 }

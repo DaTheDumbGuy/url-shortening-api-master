@@ -7,4 +7,9 @@
     color: $color;
     border-radius: $border-radius;
 }
-  
+
+@mixin buttonHover($color, $cursor, $opacity){
+    cursor: $cursor;
+    opacity: $opacity;
+    color:$color;
+}

@@ -1,77 +1,90 @@
 @use '../../assets/scss/base/index' as b;
 
+
 .b-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:2em;
-    padding:2em 0;
-    flex-direction: column;
     background:b.$c_neutral_veryDarkViolet;
     color: white;
 
-    &__brandName{
-        font-size:1.5em;
-    }
-    &__links{
-        display:flex;
-        flex-direction: column;
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap:2em;
-
-        ul{
-            list-style-type: none;
-            text-align: center;
-            
-            li{
-                &:first-child{
-                    margin-bottom:0.8em;
-                    font-weight: b.$fw_bold;
+        padding:2em 0;
+        flex-direction: column;
+    
+        &__brandName{
+            font-size:1.5em;
+        }
+        &__links{
+            display:flex;
+            flex-direction: column;
+            gap:2em;
+    
+            ul{
+                list-style-type: none;
+                text-align: center;
+                
+                li{
+                    &:first-child{
+                        margin-bottom:0.8em;
+                        font-weight: b.$fw_bold;
+                    }
+                    &:not(li:first-child){
+                        line-height: 1.8em;
+                    }
+                    a{
+                        color:b.$c_neutral_gray;
+                        text-decoration: none;
+                    }
                 }
-                &:not(li:first-child){
-                    line-height: 1.8em;
-                }
-                a{
-                    color:b.$c_neutral_gray;
-                    text-decoration: none;
-                }
+            }
+        }
+    
+        &__socialLinks{
+            ul{
+                display:flex;
+                list-style-type: none;
+                gap:1.5em;
+    
             }
         }
     }
 
-    &__socialLinks{
-        ul{
-            display:flex;
-            list-style-type: none;
-            gap:1.5em;
-
-        }
-    }
 }
 
 @media (min-width:768px) {
     .b-footer{
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-wrap: wrap;
-
-        &__links{
+        &__container{
             flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
             flex-wrap: wrap;
+    
+            &__links{
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
         }
     }
 }
 
-@media(min-width:1440px){
-    .b-footer{
-        // width:1100px;
-        padding:2em 120px;
-        &__links{
-            width:500px;
-            justify-content: flex-end;
+@media(min-width:1024px){
 
-            ul{
-                text-align: start;
+    .b-footer{
+        
+        &__container{
+            width:90%;
+            max-width: 1100px;
+            margin:auto;
+
+            &__links{
+                width:500px;
+                justify-content: flex-end;
+                
+                ul{
+                    text-align: start;
+                }
             }
         }
     }

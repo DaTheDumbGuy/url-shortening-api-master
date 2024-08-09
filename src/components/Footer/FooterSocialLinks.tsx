@@ -6,7 +6,7 @@ import styles from './Footer.module.scss';
 
 export default function FooterSocialLinks() {
     return (
-        <div className={styles['b-footer__socialLinks']}>
+        <div className={styles['b-footer__container__socialLinks']}>
             <ul>
                 <li><a href="#"><img src={facebookIcon} alt="Facebook"/></a></li>
                 <li><a href="#"><img src={twitterIcon} alt="Twitter"/></a></li>

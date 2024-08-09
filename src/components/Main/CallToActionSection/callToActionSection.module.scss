@@ -16,6 +16,10 @@
 
     button{
         @include m.button-styles(b.$bg_primary_cyan, 1em, b.$fw_bold, white, 50px, 2rem, 1rem);
+
+        &:hover{
+            @include m.buttonHover(none, pointer, 0.8);
+        }
     }
 }
 

@@ -42,6 +42,9 @@
 
         button{
             @include m.button-styles(i.$bg_primary_cyan, 1em, i.$fw_bold, white, 50px, 2rem, 1rem);
+            &:hover{
+                @include m.buttonHover(none,pointer ,0.5 )
+            }
         }
     }
 }
@@ -59,31 +62,15 @@
     .b-introSection{
         flex-direction: row;
         align-items: center;
-        padding-left:35px;
-
-        &__getStarted{
-            width: 50%;
-            text-align: start;
-        }
-        &__imgContainer{
-            width:50%;
-
-            img{
-                width:500px;
-            }
-        }
-    }
-}
-@media (min-width:1440px) {
-    .b-introSection{
         margin:1em auto 0 auto;
         padding:0;
-        width:1100px;
-
+        width:90%;
+        max-width: 1100px;
+        
         &__getStarted{
             padding: 0;
-            // width:100%;
-
+            text-align: start;
+            
             h2{
                 font-size:3.5em;
                 margin-bottom:0;
@@ -96,8 +83,8 @@
         }
         &__imgContainer{
             overflow: unset;
-            padding-left:100px;
-
+            width: 50%;
+            
             img{
                 position: relative;
                 right:-100px;
@@ -106,3 +93,9 @@
         }
     }
 }
+// @media (min-width:1440px) {
+//     .b-introSection{
+//         width:1100px;
+//     }
+
+// }
